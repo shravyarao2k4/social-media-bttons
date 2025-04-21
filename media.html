@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mediaButtons</title>
+    <link rel="stylesheet" href= media.css>
+</head>
+<body>
+    <div class="share">
+        <button onclick="sharepage('whatsapp')"><img src="./wtsp.png" title="share using whatsapp"></button>
+        <button onclick="sharepage('facebook')"><img src="./fb.png" title="share using facebook"></button>
+        <button onclick="sharepage('telegram')"><img src="./telegram.png" title="share using telegram"></button>
+        <button onclick="sharepage('twitter')"><img src="./twitter.png" title="share using twitter"></button>
+        
+        
+    </div>
+    <script>
+        let url=" https://youtu.be/OCR-Ae_TbJc?si=KToHPsF047wYrlsv"
+        let socialMediaShare={
+            'whatsapp': " https://api.whatsapp.com/send?text="+url,
+            'facebook':"https://facebook.com/sharer/sharer.php?u" + url,
+            'telegram':" https://t.me/share/url?url="+url,
+            'twitter': 'https://twitter.com/share?url='+url 
+
+        };
+        function sharepage(site){
+              window.open(socialMediaShare[site])
+        }
+        let p={
+            name:"hvfsag"
+        }
+       console.log( p['name']);
+       
+
+        
+    </script>
+    
+</body>
+</html>
